@@ -1,0 +1,21 @@
+version: '3'
+networks:
+  turn_based_game:
+    driver: bridge
+services:
+  mock_httpapi:
+    image: tbg_mock_httpapi
+    container_name: tbg_mock_httpapi
+    ports:
+      - "8000:8000"
+    networks:
+      - "turn_based_game"
+    environment:
+      - ENVIRONMENT=Development
+  lambda:
+    image: tbg_lambda
+    container_name: tbg_lambda
+    networks:
+      - "turn_based_game"
+    environment:
+      - SENTRY_WEBHOOK=$SENTRY_WEBHOOK

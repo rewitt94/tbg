@@ -5,7 +5,7 @@ export interface TurnCounterProps {
   readonly turnNumber: number;
 }
 
-const getSeasonIcon = (season: 1 | 2 | 3 | 4) => {
+const getSeasonImage = (season: 1 | 2 | 3 | 4) => {
     const neverCheck = (_: never) => {}
     let iconPath;
     switch (season) {
@@ -31,8 +31,10 @@ export const TurnCounter: React.FC<TurnCounterProps> = ({
   season,
   turnNumber,
 }) => {
-  return <div style={{ border: 'solid', borderRadius: '10px', backgroundColor: '#fff8f2', display: 'inline-flex', width: '500px', margin: '20px', padding: '5px' }}>
-      <div style={{ flex: 2, fontSize: '30px'}}><p>Turn Number: {turnNumber}</p></div>
-      <div style={{ flex: 1 }}>{getSeasonIcon(season)}</div>
-    </div>;
+    return <div className="flex justify-center" style={{height: "175px"}}>
+        <div className="block p-6 rounded-lg shadow-lg bg-white max-w-sm">
+            <p style={{marginBottom: "5px"}}>Turn Number: {turnNumber}</p>
+            {getSeasonImage(season)}
+        </div>
+    </div>
 };

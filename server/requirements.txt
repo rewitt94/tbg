@@ -1,8 +1,0 @@
-fastapi
-requests
-mypy
-pytest
-flake8
-black
-sqlalchemy
-uvicorn

@@ -7,11 +7,20 @@ export interface TurnPhaseProps {
 export const TurnPhase: React.FC<TurnPhaseProps> = ({
   phase,
 }) => {
-  return <div style={{ border: 'solid', borderRadius: '10px', backgroundColor: '#fff8f2', display: 'inline-flex', width: '500px', margin: '20px', padding: '5px' }}>
-      {['BUY', 'SHIFT', 'ACTIVE', 'SUBMITTED'].map((turnPhaseName, index) => {
-        return <div style={{ flex: 1, color: phase === index + 1 ? 'red' : 'black' }}>
-            <p>{turnPhaseName}</p>
+  return <div>
+    <div className="flex justify-center" style={{height: "175px"}}>
+        <div className="block p-6 rounded-lg shadow-lg bg-white max-w-sm" style={{width: "500px"}}>
+        <div className="w-full bg-gray-200 h-1">
+          <div className="bg-blue-600 h-1" style={{width: "45%"}}></div>
         </div>
-      })}
-    </div>;
+        <div className="flex">
+          <div className="flex-1">Buy</div>
+          <div className="flex-1">Shift</div>
+          <div className="flex-1">Stock</div>
+          <div className="flex-1">thing?</div>
+          <div className="flex-1">thing?</div>
+        </div>
+      </div>
+    </div>
+  </div>
 };

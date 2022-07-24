@@ -1,0 +1,8 @@
+[project] 
+name = "mock_httpapi"
+version = "0.1"
+description = "python server that mocks AWS HTTP Api Apigateway"
+
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"

@@ -10,7 +10,7 @@ export interface GameInfoHeaderProps {
 export const GameInfoHeader: React.FC<GameInfoHeaderProps> = ({
   turnCounterProps,
 }) => {
-  return <div style={{ textAlign: 'left' }}>
+  return <div style={{ textAlign: 'left', display: 'flex' }}>
         <TurnCounter season={turnCounterProps.season} turnNumber={turnCounterProps.turnNumber} />
         <TurnPhase phase={1} />
     </div>
