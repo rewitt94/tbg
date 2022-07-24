@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export interface TurnPhaseProps {
   readonly phase: 1 | 2 | 3 | 4;
@@ -8,10 +8,10 @@ export const TurnPhase: React.FC<TurnPhaseProps> = ({
   phase,
 }) => {
   return <div>
-    <div className="flex justify-center" style={{height: "175px"}}>
-        <div className="block p-6 rounded-lg shadow-lg bg-white max-w-sm" style={{width: "500px"}}>
+    <div className="flex justify-center" style={{height: '175px'}}>
+      <div className="block p-6 rounded-lg shadow-lg bg-white max-w-sm" style={{width: '500px'}}>
         <div className="w-full bg-gray-200 h-1">
-          <div className="bg-blue-600 h-1" style={{width: "45%"}}></div>
+          <div className="bg-blue-600 h-1" style={{width: '45%'}}></div>
         </div>
         <div className="flex">
           <div className="flex-1">Buy</div>
@@ -22,5 +22,5 @@ export const TurnPhase: React.FC<TurnPhaseProps> = ({
         </div>
       </div>
     </div>
-  </div>
+  </div>;
 };
