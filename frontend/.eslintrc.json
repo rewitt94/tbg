@@ -17,8 +17,12 @@
     },
     "plugins": [
         "react",
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "prettier"
     ],
     "rules": {
+        "prettier/prettier": "error",
+        "object-curly-spacing": "off",
+        "require-jsdoc": "off"
     }
 }
